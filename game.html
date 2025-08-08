@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juego de la Serpiente de Orquídeas</title>
+  <link rel="stylesheet" href="dsad.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <style>
+    /* Estilos específicos para el juego */
+    body.game-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #e6d9f2;
+    }
+    #game-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    #game-board {
+      border: 3px solid #8a4ca8;
+      background-color: #f2e6ff;
+    }
+    #score {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #8a4ca8;
+      margin-bottom: 1rem;
+    }
+    #back-to-gallery {
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #a865e1, #8a4ca8);
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.3s, transform 0.3s;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    #back-to-gallery:hover {
+        background: linear-gradient(135deg, #8a4ca8, #a865e1);
+        transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="game-page">
+  <header>
+    <h1>Recoge las orquideas</h1>
+  </header>
+
+  <div id="game-container">
+    <div id="score">Puntuación: 0</div>
+    <div id="lives">Vidas Extra: 0</div>
+    <canvas id="game-board" width="400" height="400"></canvas>
+    <div id="game-over-container">
+      <div id="paint-splatter"></div>
+      <div class="flash"></div>
+      <div id="game-over-text">
+        <a href="index.html" id="back-arrow">&#x2190;</a>
+        <h1>GAME OVER</h1>
+        <button id="play-again-btn">Jugar de Nuevo</button>
+      </div>
+    </div>
+  </div>
+  
+  <a href="index.html" id="back-to-gallery">Volver a la Galería</a>
+
+  <script src="game.js"></script>
+</body>
+</html>
